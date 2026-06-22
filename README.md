@@ -6,7 +6,7 @@ This project demonstrates hands-on experience with cloud deployment, version con
 ---
 
 ## 🚀 Live Project
-http://your-bucket-name.s3-website.ap-south-1.amazonaws.com
+http://d398vnjzujafys.cloudfront.net/
 
 ---
 
