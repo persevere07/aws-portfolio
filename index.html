@@ -1,64 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amlan | Cloud Engineer Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amlan Tripathy | DevOps Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
+  <!-- HERO SECTION -->
   <header class="hero">
-    <div class="glass">
-      <h1>Amlan</h1>
-      <p>Cloud & DevOps Enthusiast ☁️ | AWS Learner</p>
+    <div class="container">
+      <h1>Hi, I'm <span>Amlan Tripathy</span></h1>
+      <p class="subtitle">
+        DevOps Enthusiast | AWS Practitioner | Linux & Cloud Engineer
+      </p>
 
-      <div class="cta">
-        <a href="https://github.com/persevere07" target="_blank">GitHub</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <div class="buttons">
+        <a href="#about" class="btn">About Me</a>
+        <a href="#skills" class="btn outline">My Skills</a>
+        <a href="mailto:amlantrpth@gmail.com" class="btn outline">Contact Me</a>
       </div>
     </div>
   </header>
 
-  <section class="container">
-    <h2>About Me</h2>
-    <p>
-      I am building strong fundamentals in Cloud Computing, AWS, and DevOps.
-      This portfolio showcases my hands-on learning and deployment skills.
-    </p>
-  </section>
-
-  <section class="container" id="skills">
-    <h2>Skills</h2>
-    <div class="badges">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>AWS S3</span>
-      <span>Linux</span>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate DevOps learner with hands-on experience in AWS, Linux, Ubuntu, Apache,
+        and various modern DevOps tools. I enjoy building scalable cloud infrastructure,
+        automating deployments, and working with CI/CD pipelines.
+        My goal is to become a highly skilled Cloud & DevOps Engineer contributing to real-world production systems.
+      </p>
     </div>
   </section>
 
-  <section class="container" id="projects">
-    <h2>Projects</h2>
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section dark">
+    <div class="container">
+      <h2>Technical Skills</h2>
 
-    <div class="card">
-      <h3>☁️ AWS Static Portfolio</h3>
-      <p>Deployed a static website using AWS S3 with public hosting and GitHub version control.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>AWS Cloud</h3>
+          <p>EC2, S3, IAM, VPC, CloudFront, basic architecture design and hosting static websites.</p>
+        </div>
+
+        <div class="card">
+          <h3>Linux / Ubuntu</h3>
+          <p>System administration, file permissions, package management, shell basics.</p>
+        </div>
+
+        <div class="card">
+          <h3>Web Hosting</h3>
+          <p>Hosting static websites using AWS S3, GitHub Pages, and basic server deployment.</p>
+        </div>
+
+        <div class="card">
+          <h3>DevOps Tools</h3>
+          <p>Git, GitHub, basic CI/CD concepts, version control workflows.</p>
+        </div>
+      </div>
     </div>
-
   </section>
 
-  <section class="container" id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourmail@example.com</p>
+  <!-- PROJECT SECTION -->
+  <section class="section">
+    <div class="container">
+      <h2>Project</h2>
+
+      <div class="project-card">
+        <h3>AWS Static Portfolio Website</h3>
+        <p>
+          A fully hosted static portfolio website deployed on AWS S3 using free tier services.
+          Integrated GitHub for version control and continuous updates.
+          Designed with responsive UI for better user experience.
+        </p>
+
+        <ul>
+          <li>✔ Hosted on AWS S3 Static Website Hosting</li>
+          <li>✔ Version controlled using Git & GitHub</li>
+          <li>✔ Responsive modern UI design</li>
+          <li>✔ CI/CD ready structure</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
+  <!-- CONTACT SECTION -->
+  <section class="section dark">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate or connect, feel free to reach out.</p>
+
+      <div class="contact-box">
+        <p>Email: <strong>amlantrpth@gmail.com</strong></p>
+        <p>GitHub: <strong>github.com/persevere07</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>Built with AWS S3 • 2026</p>
+    <p>© 2026 Amlan Tripathy | Built on AWS Free Tier</p>
   </footer>
 
 </body>
