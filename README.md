@@ -84,5 +84,4 @@ GitHub: https://github.com/persevere07
 ---
 
 ## 📌 Note
-
 This project is part of my AWS Free Tier + DevOps learning journey.
