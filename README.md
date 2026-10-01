@@ -16,7 +16,7 @@ This repository contains my hands-on work, projects, configurations, and experim
 * Jenkins
 * Nginx
 * Networking
-* CI/CD
+  
 
 ## 📂 Repository Structure
 
