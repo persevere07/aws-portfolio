@@ -1,4 +1,5 @@
+```python
+name = input("Enter your name: ")
 
-name = input(str("Enter your name: "))
-
-print(f"Your name is{name}")
+print(f"Your name is {name}")
+```
