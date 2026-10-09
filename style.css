@@ -1,8 +1,3 @@
-```css
-/* =========================
-   GLOBAL STYLES
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -20,38 +15,29 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
   width: 90%;
   max-width: 1150px;
-  margin: auto;
+  margin: 0 auto;
 }
-
-/* =========================
-   HERO SECTION
-========================= */
 
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
   text-align: center;
-
   background:
     radial-gradient(circle at top, #1e40af 0%, transparent 40%),
     linear-gradient(135deg, #020617, #0f172a);
-
-  padding: 40px 0;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .hero span {
@@ -60,42 +46,43 @@ body {
 
 .subtitle {
   margin-top: 15px;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: #cbd5e1;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
 .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   margin-top: 30px;
 }
 
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  margin: 6px;
-
   background: #38bdf8;
   color: #020617;
-
+  border: 2px solid #38bdf8;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn:hover {
   transform: translateY(-3px);
   background: #7dd3fc;
+  border-color: #7dd3fc;
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
 }
 
 .btn.outline {
   background: transparent;
-  border: 2px solid #38bdf8;
   color: #38bdf8;
 }
 
@@ -104,72 +91,48 @@ body {
   color: #020617;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
 .section {
   padding: 80px 0;
 }
 
 .section h2 {
-  text-align: center;
   margin-bottom: 40px;
-
-  font-size: 2.2rem;
   color: #38bdf8;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  text-align: center;
 }
 
 .section p {
-  text-align: center;
   max-width: 850px;
-  margin: auto;
-
+  margin: 0 auto;
   color: #cbd5e1;
   font-size: 1.05rem;
+  text-align: center;
 }
-
-/* =========================
-   DARK SECTION
-========================= */
 
 .dark {
   background: #111827;
 }
 
-/* =========================
-   GRID
-========================= */
-
 .grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: 25px;
 }
 
-/* =========================
-   CARDS
-========================= */
-
 .card {
-  background: #1e293b;
-
   padding: 25px;
-
+  background: #1e293b;
   border: 1px solid #334155;
   border-radius: 12px;
-
   transition:
     transform 0.3s ease,
-    background 0.3s ease,
+    background-color 0.3s ease,
     border-color 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   background: #263449;
   border-color: #38bdf8;
 }
@@ -180,42 +143,35 @@ body {
 }
 
 .card p {
-  text-align: left;
   color: #cbd5e1;
+  text-align: left;
 }
 
-/* =========================
-   PROJECT SECTION
-========================= */
-
 .project-card {
-  background: #1e293b;
-
+  max-width: 850px;
+  margin: 0 auto;
   padding: 30px;
-
+  background: #1e293b;
   border: 1px solid #334155;
   border-radius: 12px;
-
-  max-width: 850px;
-  margin: auto;
-
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .project-card:hover {
-  border-color: #38bdf8;
   transform: translateY(-5px);
+  border-color: #38bdf8;
 }
 
 .project-card h3 {
-  color: #38bdf8;
   margin-bottom: 15px;
+  color: #38bdf8;
 }
 
 .project-card ul {
   margin-top: 15px;
   padding-left: 25px;
-
   color: #cbd5e1;
 }
 
@@ -223,59 +179,42 @@ body {
   margin-bottom: 8px;
 }
 
-/* =========================
-   CONTACT
-========================= */
-
 .contact-box {
-  text-align: center;
   margin-top: 25px;
+  text-align: center;
 }
 
 .contact-box a {
   color: #38bdf8;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .contact-box a:hover {
+  color: #7dd3fc;
   text-decoration: underline;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 footer {
-  text-align: center;
-
   padding: 25px;
-
   background: #020617;
   color: #94a3b8;
-
   border-top: 1px solid #1e293b;
+  text-align: center;
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+a:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 4px;
+}
 
 @media (max-width: 768px) {
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
   .section {
     padding: 60px 0;
   }
 
-  .section h2 {
-    font-size: 1.8rem;
+  .project-card {
+    padding: 25px;
   }
 
   .btn {
@@ -284,11 +223,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
   .hero {
     padding: 30px 15px;
   }
@@ -296,5 +230,31 @@ footer {
   .container {
     width: 92%;
   }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
 }
-```
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
